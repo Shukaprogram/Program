@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhoo Chetna - Healthy Soil, Healthy Life</title>
+    <style>
+        /* Reset some default styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+
+
+        }
+
+        /* Title and Description Styles */
+        .title {
+            display: flex;
+            align-items: center;
+            background-color: #0b4235; /* Dark Green */
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .title-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .title img {
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        .title h1 {
+            font-size: 28px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .title h3 {
+            font-size: 18px;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .title p {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Increase the width of the search bar */
+        .search-box input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            width: 300px; /* Increased width */
+        }
+
+        .search-box input[type="submit"] {
+            background-color: #007bff; /* Blue */
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .search-box input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+        }
+
+        /* Secondary header for different pages */
+        .secondary-header {
+            background-color: #35424a;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .secondary-header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .secondary-header nav ul li {
+            margin: 0 20px;
+        }
+
+        .secondary-header nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+        
+    .background-image {
+            background-image: url('BGG IMAGE.jpg');
+            background-size: cover; /* Cover both width and height */
+            background-position: center;
+            background-repeat: no-repeat;
+            max-width: 100%;
+            height: auto;
+            margin: 0; /* Remove the top margin */
+        }
+
+
+        /* Main Content Styles */
+        .main-content {
+            display: flex;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: #f8f8f8;
+            color: #000;
+            padding: 20px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+            margin: 0 0 20px;
+        }
+
+        .sidebar-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar-list li {
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .sidebar-list a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .sidebar-list a:hover {
+            color: #007bff;
+        }
+
+        /* Content Section Styles */
+        .content-section {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .content-section h2 {
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        .content-section img {
+            max-width: 40%;
+            margin: 20px 0;
+            display: block;
+            border: 1px solid #ccc;
+        }
+        .overlay {
+    padding: 1em;
+}
+.bg-dk-green {
+    background-color: #0b4235;
+}
+
+        /* Define different background colors for content sections */
+        #about {
+            background-color: #f1f1f1;
+        }
+
+        #farming-tips {
+            background-color: #c4e3cb;
+        }
+
+        #common-problems {
+            background-color: #f7dada;
+        }
+
+        #weather-and-soil {
+            background-color: #ede8b5;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .secondary-nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .secondary-nav li {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <div class="title-content">
+            <img src="Logo.jpg" alt="Bhoo Chetna Logo">
+            <div>
+                <h1>Bhoo Chetna</h1>
+                <h3>"Healthy Soil, Healthy Life"</h3>
+                <div class="divider"></div>
+                <p>Singrauli, Madhya Pradesh</p>
+            </div>
+        </div>
+        <div class="search-box">
+            <form action="https://www.google.com/search" method="GET" target="_blank">
+                <input type="text" name="q" placeholder="Search Doubts" />
+                <input type="submit" value="Search" />
+            </form>
+        </div>
+    </div>
+    <header class="secondary-header">
+        <nav>
+            <ul class="secondary-nav">
+                <li><a href="login interface.html" class="button"><b>Registration</b></a></li>
+                <li><a href="page 3.html" class="button"><b>Weather Updates</b></a></li>
+                
+                <li><a href="page 3.html" class="button"><b>Our Services</b></a></li>
+			    <li><a href="page 6.html" class "button"><b>Mandi Updates</b></a></li>
+                <li><a href="page 4.html" class="button"><b>About Soil Health<b></a></li>
+                <li><a href="page 5.html" class="button"><b>Help Desk</b></a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="hero hero-nrcs has-image bg-cream">
+    <div class="grid-container">
+      <div class="grid-row">
+        <div class="grid-col-12">
+            <div class="image">  <img loading="lazy" src="BGG IMAGE.jpg" width="1650" height="480" alt="Healthy soil looks dark, crumbly, and porous, and is home to worms and other organisms. Healthy soil smells sweet and earthy. It feels soft, moist, and friable, and allows plant roots to grow unimpeded.
+
+
+    <div class="main-content">
+        
+
+        <article class="content-section" id="about">
+ 
+            <h2>About Soil</h2>
+            <img src="about.jpg" alt="Soil Profile">
+           <p>Soil health is the cornerstone of successful agriculture. It plays a pivotal role in ensuring the growth and productivity of crops. Healthy soil is characterized by its richness in nutrients, teeming with beneficial microorganisms, and having excellent physical structure.</p>
+    <p>Soil is not merely a medium for plant growth; it is a dynamic, living ecosystem. It supports an intricate web of organisms, from earthworms to microscopic bacteria, all contributing to its overall health. These organisms aid in nutrient cycling and decomposition of organic matter, creating an environment that fosters robust plant growth.</p>
+    <p>Monitoring soil health is of utmost importance for sustainable farming practices. Understanding the conditions of your soil is the first step in making informed decisions about crop management and land use. Soil testing is an essential tool in assessing its health, providing data on nutrient levels, pH, and other critical indicators.</p>
+    <p>As we delve deeper into the world of soil health, we'll explore key indicators such as soil pH, nutrient levels, organic matter content, and microbial activity. Additionally, we'll discuss the importance of regular soil testing and how it enables you to make precise choices regarding fertilization and soil amendments, ultimately leading to healthier and more productive soil.</p>
+            <!-- Add more content here -->
+        </article>
+         <article class="content-section" id="farming-tips">
+            <h2>Farming Tips</h2>
+            <img src="Tips.jpg" alt="Farming Tips">
+            <p>Optimal soil health practices include crop rotation, organic matter addition, proper irrigation, and pH management. Ensure to test your soil regularly to assess its health.</p>
+        </article>
+
+
+        <article class="content-section" id="weather-and-soil">
+            <h2>Weather and Soil</h2>
+            <img src="weather.jpg" alt="Weather and Soil">
+            
+    <p>Understand the impact of weather patterns on soil health and how to adapt your farming practices accordingly.</p>
+    <p>Weather conditions such as temperature, rainfall, and humidity can significantly influence soil health. It's important to be aware of these factors and make adjustments to your farming techniques to optimize soil health and crop production.</p>
+</article>
+            <!-- Add more content here -->
+        </article>
+
+        <article class="content-section" id="common-problems">
+            <h2>Common Problems Faced by Farmers</h2>
+            <img src="problem.jpg" alt="Common Problems">
+           
+    <p>Farmers often encounter various challenges when it comes to soil health and agriculture. Here are some common problems:</p>
+    <ul>
+        <li>Poor Soil Fertility: Nutrient-depleted soil can lead to decreased crop yields.</li>
+        <li>Soil Erosion: Erosion can wash away valuable topsoil, impacting soil health.</li>
+        <li>Weed Infestations: Weeds compete with crops for nutrients and water.</li>
+        <li>Pest and Disease Outbreaks: Pests and diseases can damage crops and reduce yield.</li>
+        <li>Unsuitable pH Levels: Extremes in soil pH can limit nutrient availability to plants.</li>
+        <li>Water Scarcity: Insufficient irrigation affects crop growth and soil moisture.</li>
+        <li>Soil Compaction: Compacted soil reduces root growth and water infiltration.</li>
+        <li>Lack of Organic Matter: Soil with low organic matter has poor structure and nutrient-holding capacity.</li>
+    </ul>
+    <p>Addressing these problems requires good agricultural practices, soil testing, and expert advice.</p>
+            <p><a href="chatbot.html">Doubts not  resolved Chat with our Chatbot</a></p>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Bhoo Chetna. All rights reserved.</p>
+    </footer>
+</body>
+</html>

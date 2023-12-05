@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat with Soil Expert</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .chatbox {
+            width: 75%;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chatlogs {
+            height: 300px;
+            overflow: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .chatbot-background {
+            background-image: url('your-image-url.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbox">
+        <h2>Chat with Soil Expert</h2>
+        <div class="chatlogs" id="chatlogs">
+            <!-- Chat messages go here -->
+        </div>
+        <input type="text" id="userInput" placeholder="Ask your Soil Health Question">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="chatbox chatbot-background">
+        <h4><center>Farmer's Freind Module</center></h4>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const userInput = document.getElementById("userInput");
+            const question = userInput.value;
+
+            if (question.trim() === "") {
+                return;
+            }
+
+            addMessage("You", question);
+            userInput.value = "";
+
+            // Send the user's message to the chatbot
+            const reply = getSoilExpertAnswer(question);
+
+            // Display the chatbot's response
+            addMessage("Soil Expert", reply);
+        }
+
+        function addMessage(sender, message) {
+            const chatlogs = document.getElementById("chatlogs");
+            const messageDiv = document.createElement("div");
+            messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            chatlogs.appendChild(messageDiv);
+        }
+
+        function getSoilExpertAnswer(question) {
+            // Define your FAQ questions and answers here
+            const faq = {
+                "What is the importance of soil testing?": "Soil testing helps assess soil nutrient levels and pH, allowing for informed fertilization and amendments for optimal crop growth.",
+                "How can I improve soil fertility naturally?": "You can improve soil fertility naturally by adding compost, cover cropping, and using organic mulches.",
+                "What is the ideal pH level for most crops?": "The ideal pH level for most crops is between 6.0 and 7.0, slightly acidic to neutral.",
+                "How do I control pests and diseases in my crops?": "Integrated pest management (IPM) combines various methods, including biological control, crop rotation, and judicious use of pesticides.",
+                "Can you recommend cover crops for improving soil health?": "Common cover crops like clover, rye, and buckwheat can improve soil structure and nutrient retention.",
+                "What are the signs of poor soil health?": "Signs of poor soil health include slow plant growth, nutrient deficiencies, compacted soil, and erosion.",
+                "How often should I conduct soil testing?": "Regular soil testing is recommended, typically every 2-3 years, to monitor changes in soil health.",
+                "What is the role of soil microbes in agriculture?": "Soil microbes help break down organic matter, release nutrients, and improve soil structure, benefiting plant health.",
+                "How can I prevent soil erosion on my farm?": "Prevent soil erosion by planting windbreaks, using cover crops, and practicing no-till farming.",
+                "What are the benefits of crop rotation?": "Crop rotation helps reduce soil diseases, improve nutrient cycling, and break pest cycles.",
+                "How can I make organic compost for my soil?": "You can create organic compost by collecting kitchen scraps, yard waste, and manure in a compost pile or bin.",
+                "What is the role of mycorrhizal fungi in soil health?": "Mycorrhizal fungi form a symbiotic relationship with plant roots, aiding nutrient uptake and enhancing soil structure.",
+				 "What is the importance of soil testing?": "Soil testing helps assess soil nutrient levels and pH, allowing for informed fertilization and amendments for optimal crop growth.",
+  "How can I improve soil fertility naturally?": "You can improve soil fertility naturally by adding compost, cover cropping, and using organic mulches.",
+  "What is the ideal pH level for most crops?": "The ideal pH level for most crops is between 6.0 and 7.0, slightly acidic to neutral.",
+  "How do I control pests and diseases in my crops?": "Integrated pest management (IPM) combines various methods, including biological control, crop rotation, and judicious use of pesticides.",
+  "Can you recommend cover crops for improving soil health?": "Common cover crops like clover, rye, and buckwheat can improve soil structure and nutrient retention.",
+  "What are the signs of poor soil health?": "Signs of poor soil health include slow plant growth, nutrient deficiencies, compacted soil, and erosion.",
+  "How often should I conduct soil testing?": "Regular soil testing is recommended, typically every 2-3 years, to monitor changes in soil health.",
+  "What is the role of soil microbes in agriculture?": "Soil microbes help break down organic matter, release nutrients, and improve soil structure, benefiting plant health.",
+  "How can I prevent soil erosion on my farm?": "Prevent soil erosion by planting windbreaks, using cover crops, and practicing no-till farming.",
+  "What are the benefits of crop rotation?": "Crop rotation helps reduce soil diseases, improve nutrient cycling, and break pest cycles.",
+  "How can I make organic compost for my soil?": "You can create organic compost by collecting kitchen scraps, yard waste, and manure in a compost pile or bin.",
+  "What is the role of mycorrhizal fungi in soil health?": "Mycorrhizal fungi form a symbiotic relationship with plant roots, aiding nutrient uptake and enhancing soil structure.",
+  "How can I conserve water in agriculture?": "Water conservation in agriculture can be achieved through practices like drip irrigation, rainwater harvesting, and efficient water use.",
+  "What should I do if my soil is too compacted?": "If your soil is compacted, consider aerating the soil, adding organic matter, and avoiding heavy machinery to improve soil structure.",
+  "What is the difference between organic and inorganic fertilizers?": "Organic fertilizers are derived from natural sources and release nutrients slowly, while inorganic fertilizers are synthetic and provide nutrients more quickly.",
+  "What is soil pH, and why is it important?": "Soil pH measures the acidity or alkalinity of the soil. It's crucial because it affects nutrient availability to plants and microbial activity.",
+  "How can I reduce the use of chemical pesticides on my farm?": "You can reduce chemical pesticide use by implementing IPM strategies, using beneficial insects, and practicing crop rotation.",
+  "What is the impact of soil erosion on the environment?": "Soil erosion leads to loss of topsoil, water pollution, and reduced agricultural productivity, negatively impacting the environment.",
+  "What are the best practices for sustainable agriculture?": "Sustainable agriculture practices include crop diversification, conservation tillage, and minimizing chemical inputs to protect soil health and the environment.",
+  "How can I improve soil aeration?": "Improving soil aeration can be done by incorporating organic matter, avoiding compaction, and using tools like aerators to enhance air circulation in the soil.",
+  "How does soil pH affect nutrient availability?": "Soil pH affects nutrient availability by influencing the solubility of essential nutrients. In acidic soils, some nutrients become less available, while in alkaline soils, others become less accessible to plants.",
+  "What is the impact of soil contamination on crop quality?": "Soil contamination can lead to reduced crop quality and safety, as contaminants can be taken up by plants and affect their health and the quality of the harvested produce.",
+            };
+
+            // Use the faq object to get answers
+            return faq[question] || "I'm sorry, I don't have information on that topic.";
+        }
+    </script>
+</body>
+</html>

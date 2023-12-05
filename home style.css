@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #35424a;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.header h3 {
+    font-size: 16px;
+}
+
+.header p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.main-content {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #35424a;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin: 0 0 20px;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-list li {
+    margin: 10px 0;
+    position: relative;
+}
+
+.sidebar-list a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    margin: 10px 0;
+}
+
+.content-section {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Define different background colors for content sections */
+#about {
+    background-color: #f1f1f1;
+}
+
+#farming-tips {
+    background-color: #c4e3cb;
+}
+
+#pest-management {
+    background-color: #ffd700;
+}
+
+#weather-soil {
+    background-color: #add8e6;
+}
+
+#soil-indicators {
+    background-color: #ffc0cb;
+}
+
+#soil-testing {
+    background-color: #90ee90;
+}
+
+#soil-erosion {
+    background-color: #ffdb58;
+}
+
+#interact-experts {
+    background-color: #a9a9a9;
+}
+
+/* Add more styles for other content sections */

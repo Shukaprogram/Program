@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indian Farmers Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #899499;
+        }
+        .header {
+            background-color: #35424a;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+        }
+
+        .header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .header nav ul li {
+            margin: 0 20px;
+        }
+
+        .header nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .language-selector {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .registration,
+        .login,
+        .dashboard {
+            display: none;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #d3d3d3;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%; /* Adjust the image size as needed */
+        }
+
+        h1 {
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .header {
+            background-color: #35424a; /* Change the color to your choice */
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>User Registration</h1>
+    </div>
+    <div class="language-selector">
+        <h2>Select your language:</h2>
+        <select id="language" onchange="showRegistration()">
+            <option value="english">English</option>
+            <option value="hindi">Hindi</option>
+        </select>
+		<div class="image-container">
+        <img src="banner-04.jpg" alt="Your Image Description">
+    </div>
+    </div>
+    
+
+    <div class="registration">
+        <h2>Registration</h2>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="State">
+        <input type="text" placeholder="District">
+        <input type="text" placeholder="City/Village Name">
+
+        <input type="text" placeholder="Aadhar No.">
+        <button onclick="showDashboard('registration')">Register</button>
+    </div>
+
+    <div class="login">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button onclick="showDashboard('login')">Login</button>
+    </div>
+
+    <div class="dashboard">
+        <h2>Welcome to the Dashboard</h2>
+        <li><a href="index.html">Home Page</a></li>
+    </div>
+
+    <script>
+        function showRegistration() {
+            const language = document.getElementById("language").value;
+            if (language === "hindi") {
+                document.body.style.fontFamily = "Arial, sans-serif";
+            } else {
+                document.body.style.fontFamily = "Noto Sans, sans-serif";
+            }
+            document.querySelector(".language-selector").style.display = "none";
+            document.querySelector(".registration").style.display = "block";
+        }
+
+        function showDashboard() {
+            document.querySelector(".registration").style.display = "none";
+            document.querySelector(".login").style.display = "none";
+            document.querySelector(".dashboard").style.display = "block";
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

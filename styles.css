@@ -1,0 +1,107 @@
+/* Add a background image to the body */
+body {
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Remove default margin to prevent spacing around the body */
+}
+
+/* Style the header with a background color and center-align text */
+.header {
+    background-color: #4CAF50;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the header text */
+.header h1 {
+    font-size: 36px;
+    color: white;
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    text-align: center;
+}
+
+/* Style the navigation menu items */
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Style the navigation menu links */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Add padding and center the content in the main section */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the image container */
+.content-image {
+    float: left;
+    width: 40%;
+    padding: 10px;
+}
+
+/* Style the image */
+.content-image img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #4CAF50;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the text container */
+.content-text {
+    float: right;
+    width: 55%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Style the section headers with bullets */
+.content-text h2 {
+    font-size: 24px;
+    color: #4CAF50;
+    font-family: 'Lato', sans-serif;
+    list-style: inside disc; /* Add bullets */
+    padding-left: 15px; /* Adjust the bullet position */
+}
+
+/* Style the paragraph text */
+.content-text p {
+    font-size: 16px;
+    color: #333;
+    font-family: 'Verdana', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Add spacing to the chatbot link */
+.content-text a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+}

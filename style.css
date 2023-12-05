@@ -1,0 +1,121 @@
+/* Reset some default browser styles */
+html, body, h1, h2, p, ul, li, form, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial, sans-serif';
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Main content styles */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.content {
+    padding: 20px 0;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* Contact form styles */
+.contact-form {
+    padding: 20px;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+}
+/* Add a background image to the body */
+body {
+    background-image: url('bg image.jpg');
+    background-size: cover; /* Adjust the image size to cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Fixed background while scrolling */
+    font-family: 'Arial', sans-serif; /* Set the desired font family */
+}
